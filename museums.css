@@ -1,0 +1,54 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #f0f8ff;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.search-container {
+    margin-top: 10px;
+}
+
+.search-box {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 15px;
+}
+
+.menu ul li a {
+    display: block;
+    background-color: #B0E0E6;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}

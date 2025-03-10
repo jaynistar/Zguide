@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海各区博物馆 - 智游上海</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="museums.css">
+</head>
+
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="th">ภาษาไทย</option>
+            </select>
+        </div>
+        <h1 id="header-title">上海各区博物馆</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="搜索..." class="search-box" oninput="searchMuseums()">
+        </div>
+    </header>
+
+    <!-- 各区选项 -->
+    <nav class="menu">
+        <ul>
+            <li><a href="pudong_museums.html" id="pudong-link">浦东新区</a></li>
+            <li><a href="huangpu_museums.html" id="huangpu-link">黄浦区</a></li>
+            <li><a href="jingan_museums.html" id="jingan-link">静安区</a></li>
+            <li><a href="yangpu_museums.html" id="yangpu-link">杨浦区</a></li>
+            <li><a href="hongkou_museums.html" id="hongkou-link">虹口区</a></li>
+            <li><a href="changning_museums.html" id="changning-link">长宁区</a></li>
+            <li><a href="minhang_museums.html" id="minhang-link">闵行区</a></li>
+            <li><a href="putuo_museums.html" id="putuo-link">普陀区</a></li>
+            <li><a href="xuhui_museums.html" id="xuhui-link">徐汇区</a></li>
+            <li><a href="jinshan_museums.html" id="jinshan-link">金山区</a></li>
+            <li><a href="baoshan_museums.html" id="baoshan-link">宝山区</a></li>
+            <li><a href="jiading_museums.html" id="jiading-link">嘉定区</a></li>
+            <li><a href="songjiang_museums.html" id="songjiang-link">松江区</a></li>
+            <li><a href="qingpu_museums.html" id="qingpu-link">青浦区</a></li>
+            <li><a href="fengxian_museums.html" id="fengxian-link">奉贤区</a></li>
+            <li><a href="chongming_museums.html" id="chongming-link">崇明区</a></li>
+            <!-- 可以根据需要添加更多区 -->
+        </ul>
+    </nav>
+
+    <script src="museums_scripts.js"></script>
+</body>
+
+</html>

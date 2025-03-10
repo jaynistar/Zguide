@@ -1,0 +1,42 @@
+#museums-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.museum-box {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.museum-box:hover {
+    transform: translateY(-5px);
+}
+
+.museum-box h2 {
+    margin-top: 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #B0E0E6;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #f0f8ff; /* 浅蓝色背景 */
+    color: #333;
+
+header {
+    text-align: center;

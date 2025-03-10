@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海科技馆</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            height: 400px;
+            background-image: url('shanghaiscience.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .content-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 48%;
+            box-sizing: border-box;
+        }
+
+        .content-box h3 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .content-box ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .content-box ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .content-box img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        select {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header with background image -->
+    <header>
+        <h1 id="museum-name">上海科技馆</h1>
+    </header>
+
+    <!-- Language Selector -->
+    <div style="text-align: center;">
+        <label for="language">选择语言:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+            <option value="ja">日本語</option>
+            <option value="th">ภาษาไทย</option>
+        </select>
+    </div>
+
+    <!-- Main content -->
+    <section>
+        <div class="container">
+            <!-- 博物馆简介 -->
+            <div class="content-box" id="intro-box">
+                <h3 id="intro-title">上海科技馆</h3>
+                <p id="intro-description">上海科技馆是中国领先的现代科技博物馆之一，拥有多个展馆，展示着从自然科学到前沿技术的各类展品。馆内展览内容涵盖了天文、物理、地球科学、生命科学以及未来技术等多个领域。通过互动展览和沉浸式体验，上海科技馆致力于将科学教育与娱乐相结合，吸引了大量的游客和学生团体前来参观。</p>
+            </div>
+
+            <!-- 开放时间 -->
+            <div class="content-box" id="hours-box">
+                <h3 id="hours-title">开放时间</h3>
+                <ul id="hours-list">
+                    <li>周一至周五：09:00 - 17:15</li>
+                    <li>周六至周日：09:00 - 17:45</li>
+                    <li>节假日：09:00 - 17:45</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- 票价 -->
+            <div class="content-box" id="ticket-box">
+                <h3 id="ticket-title">票价</h3>
+                <ul id="ticket-list">
+                    <li>成人票：80元</li>
+                    <li>学生票：40元</li>
+                    <li>儿童票（1.2米以下）：免费</li>
+                    <li>老人票（70岁以上）：免费</li>
+                </ul>
+            </div>
+
+            <!-- 预约方式 -->
+            <div class="content-box" id="reservation-box">
+                <h3 id="reservation-title">预约方式</h3>
+                <p id="reservation-description">可以通过微信小程序"上海科技馆自然博物馆天文馆门票"进行预约。在预约时，您需要选择参观日期和时间段，确保顺利入馆。</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- 交通方式 -->
+            <div class="content-box" id="transport-box">
+                <h3 id="transport-title">交通方式推荐</h3>
+                <ul id="transport-list">
+                    <li>地铁：乘坐地铁2号线到达“科技馆站”，步行约5分钟即可到达博物馆。</li>
+                    <li>公交：乘坐公交车957路、941路等，在“科技馆”站下车，步行5分钟即到。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 语言切换函数
+        function changeLanguage() {
+            var language = document.getElementById('language').value;
+
+            var translations = {
+                "zh": {
+                    "museum-name": "上海科技馆",
+                    "intro-title": "博物馆简介",
+                    "intro-description": "上海科技馆是中国领先的现代科技博物馆之一，拥有多个展馆，展示着从自然科学到前沿技术的各类展品。馆内展览内容涵盖了天文、物理、地球科学、生命科学以及未来技术等多个领域。通过互动展览和沉浸式体验，上海科技馆致力于将科学教育与娱乐相结合，吸引了大量的游客和学生团体前来参观。",
+                    "hours-title": "开放时间",
+                    "hours-list": [
+                        "周一至周五：09:00 - 17:15",
+                        "周六至周日：09:00 - 17:45",
+                        "节假日：09:00 - 17:45"
+                    ],
+                    "ticket-title": "票价",
+                    "ticket-list": [
+                        "成人票：80元",
+                        "学生票：40元",
+                        "儿童票（1.2米以下）：免费",
+                        "老人票（70岁以上）：免费"
+                    ],
+                    "reservation-title": "预约方式",
+                    "reservation-description": "可以通过微信小程序\"上海科技馆自然博物馆天文馆门票\"进行预约。在预约时，您需要选择参观日期和时间段，确保顺利入馆。",
+                    "transport-title": "交通方式推荐",
+                    "transport-list": [
+                        "地铁：乘坐地铁2号线到达“科技馆站”，步行约5分钟即可到达博物馆。",
+                        "公交：乘坐公交车957路、941路等，在“科技馆”站下车，步行5分钟即到。"
+                    ]
+                },
+                "en": {
+                    "museum-name": "Shanghai Science and Technology Museum",
+                    "intro-title": "Museum Introduction",
+                    "intro-description": "The Shanghai Science and Technology Museum is one of China's leading modern science museums, with multiple exhibition halls showcasing exhibits ranging from natural science to cutting-edge technology. The exhibits cover astronomy, physics, earth science, life science, and future technologies. With interactive exhibits and immersive experiences, the museum strives to combine science education with entertainment, attracting numerous visitors and student groups.",
+                    "hours-title": "Opening Hours",
+                    "hours-list": [
+                        "Monday to Friday: 09:00 - 17:15",
+                        "Saturday to Sunday: 09:00 - 17:45",
+                        "Public Holidays: 09:00 - 17:45"
+                    ],
+                    "ticket-title": "Ticket Prices",
+                    "ticket-list": [
+                        "Adult Ticket: 80 RMB",
+                        "Student Ticket: 40 RMB",
+                        "Children (under 1.2m): Free",
+                        "Senior (over 70): Free"
+                    ],
+                    "reservation-title": "Reservation Method",
+                    "reservation-description": "Reservations can be made via the WeChat Mini Program 'Shanghai Science and Technology Museum Natural History Museum and Planetarium Tickets'. You need to select the date and time slot for your visit to ensure smooth entry.",
+                    "transport-title": "Transportation Recommendations",
+                    "transport-list": [
+                        "Metro: Take Line 2 and get off at 'Science and Technology Museum Station', walk about 5 minutes to the museum.",
+                        "Bus: Take bus routes 957 or 941, and get off at 'Science and Technology Museum Station', walk 5 minutes."
+                    ]
+                },
+                "ja": {
+                    "museum-name": "上海科学技術館",
+                    "intro-title": "博物館の紹介",
+                    "intro-description": "上海科学技術館は中国の現代科学博物館の中でリーダー的存在であり、自然科学から最先端技術に至るまで様々な展示物を展示しています。展示内容は天文学、物理学、地球科学、生命科学、未来技術など多岐にわたります。インタラクティブな展示と没入型体験を通じて、上海科学技術館は科学教育とエンターテイメントの融合を目指しており、多くの観光客や学生団体が訪れています。",
+                    "hours-title": "開館時間",
+                    "hours-list": [
+                        "月曜日から金曜日：09:00 - 17:15",
+                        "土曜日と日曜日：09:00 - 17:45",
+                        "祝日：09:00 - 17:45"
+                    ],
+                    "ticket-title": "入場料金",
+                    "ticket-list": [
+                        "大人チケット：80元",
+                        "学生チケット：40元",
+                        "子供チケット（1.2m未満）：無料",
+                        "シニア（70歳以上）：無料"
+                    ],
+                    "reservation-title": "予約方法",
+                    "reservation-description": "予約はWeChatミニプログラム「上海科学技術館自然博物館天文館チケット」で行えます。予約時には訪問日時を選択し、スムーズに入館できるようにしてください。",
+                    "transport-title": "交通手段のおすすめ",
+                    "transport-list": [
+                        "地下鉄：2号線に乗り、「科学技術館駅」で下車し、徒歩約5分。",
+                        "バス：957路や941路などで「科学技術館」バス停で下車し、徒歩5分。"
+                    ]
+                },
+                "th": {
+                    "museum-name": "พิพิธภัณฑ์วิทยาศาสตร์และเทคโนโลยีเซี่ยงไฮ้",
+                    "intro-title": "คำแนะนำพิพิธภัณฑ์",
+                    "intro-description": "พิพิธภัณฑ์วิทยาศาสตร์และเทคโนโลยีเซี่ยงไฮ้เป็นหนึ่งในพิพิธภัณฑ์วิทยาศาสตร์สมัยใหม่ชั้นนำของจีน ซึ่งมีหลายห้องแสดงให้เห็นการจัดแสดงจากวิทยาศาสตร์ธรรมชาติไปจนถึงเทคโนโลยีล้ำสมัย การจัดแสดงครอบคลุมทั้งดาราศาสตร์ ฟิสิกส์ วิทยาศาสตร์โลก วิทยาศาสตร์ชีวิต และเทคโนโลยีแห่งอนาคต ผ่านการแสดงที่มีปฏิสัมพันธ์และประสบการณ์แบบ immersive พิพิธภัณฑ์วิทยาศาสตร์และเทคโนโลยีเซี่ยงไฮ้พยายามที่จะผสมผสานการศึกษาวิทยาศาสตร์เข้ากับความบันเทิง โดยดึงดูดนักท่องเที่ยวจำนวนมากรวมถึงกลุ่มนักเรียน",
+                    "hours-title": "เวลาเปิดทำการ",
+                    "hours-list": [
+                        "จันทร์ถึงศุกร์: 09:00 - 17:15",
+                        "เสาร์ถึงอาทิตย์: 09:00 - 17:45",
+                        "วันหยุดราชการ: 09:00 - 17:45"
+                    ],
+                    "ticket-title": "ราคาเข้าสู่พิพิธภัณฑ์",
+                    "ticket-list": [
+                        "ตั๋วผู้ใหญ่: 80 หยวน",
+                        "ตั๋วนักเรียน: 40 หยวน",
+                        "ตั๋วเด็ก (ต่ำกว่า 1.2 เมตร): ฟรี",
+                        "ตั๋วผู้สูงอายุ (อายุ 70 ปีขึ้นไป): ฟรี"
+                    ],
+                    "reservation-title": "วิธีการจองตั๋ว",
+                    "reservation-description": "คุณสามารถทำการจองผ่านแอปพลิเคชัน WeChat '上海科技馆自然博物馆天文馆门票' คุณจะต้องเลือกวันและเวลาที่คุณต้องการเยี่ยมชมเพื่อให้แน่ใจว่าคุณสามารถเข้าชมได้โดยไม่มีปัญหา",
+                    "transport-title": "วิธีการเดินทางที่แนะนำ",
+                    "transport-list": [
+                        "รถไฟฟ้า: นั่งรถไฟฟ้าใต้ดินสาย 2 และลงที่สถานี 'พิพิธภัณฑ์วิทยาศาสตร์และเทคโนโลยี' แล้วเดินประมาณ 5 นาทีถึงพิพิธภัณฑ์",
+                        "รถบัส: นั่งรถบัสสาย 957 หรือ 941 ลงที่ป้าย 'พิพิธภัณฑ์วิทยาศาสตร์และเทคโนโลยี' แล้วเดิน 5 นาที"
+                    ]
+                }
+            };
+
+            var selectedLang = translations[language];
+
+            // Update titles and content based on selected language
+            document.getElementById("museum-name").innerText = selectedLang["museum-name"];
+            document.getElementById("intro-title").innerText = selectedLang["intro-title"];
+            document.getElementById("intro-description").innerText = selectedLang["intro-description"];
+
+            document.getElementById("hours-title").innerText = selectedLang["hours-title"];
+            var hoursList = document.getElementById("hours-list");
+            hoursList.innerHTML = "";
+            selectedLang["hours-list"].forEach(function (item) {
+                var li = document.createElement("li");
+                li.textContent = item;
+                hoursList.appendChild(li);
+            });
+
+            document.getElementById("ticket-title").innerText = selectedLang["ticket-title"];
+            var ticketList = document.getElementById("ticket-list");
+            ticketList.innerHTML = "";
+            selectedLang["ticket-list"].forEach(function (item) {
+                var li = document.createElement("li");
+                li.textContent = item;
+                ticketList.appendChild(li);
+            });
+
+            document.getElementById("reservation-title").innerText = selectedLang["reservation-title"];
+            document.getElementById("reservation-description").innerText = selectedLang["reservation-description"];
+
+            document.getElementById("transport-title").innerText = selectedLang["transport-title"];
+            var transportList = document.getElementById("transport-list");
+            transportList.innerHTML = "";
+            selectedLang["transport-list"].forEach(function (item) {
+                var li = document.createElement("li");
+                li.textContent = item;
+                transportList.appendChild(li);
+            });
+        }
+
+        // Initialize default language to Chinese
+        window.onload = function () {
+            changeLanguage();
+        };
+    </script>
+
+</body>
+
+</html>

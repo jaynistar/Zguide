@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="zh">外滩 - 智游上海</title>
+    <title data-lang="en">The Bund - Hello Shanghai</title>
+    <title data-lang="ja">バンド通り - こんにちは上海</title>
+    <title data-lang="th">ถนนบันด์ - สวัสดีเซี่ยงไฮ้</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 打卡拍照框样式 */
+        .check-in-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .check-in-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* 隐藏非当前语言的元素 */
+        [data-lang] {
+            display: none;
+        }
+
+        [data-lang="zh"] {
+            display: block;
+        }
+ /* 调整图片样式，让图片更长 */
+        #main-img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="th">ภาษาไทย</option>
+            </select>
+        </div>
+        <h1 data-lang="zh" id="header-title">智游上海</h1>
+        <h1 data-lang="en" id="header-title">Hello Shanghai</h1>
+        <h1 data-lang="ja" id="header-title">こんにちは上海</h1>
+        <h1 data-lang="th" id="header-title">สวัสดีเซี่ยงไฮ้</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="搜索..." class="search-box">
+        </div>
+    </header>
+
+    <main>
+        <h2 data-lang="zh">外滩</h2>
+        <h2 data-lang="en">The Bund</h2>
+        <h2 data-lang="ja">バンド通り</h2>
+        <h2 data-lang="th">ถนนบันด์</h2>
+        <img id="main-img" src="Bund1.jpg" alt="外滩">
+        <p data-lang="zh">外滩是上海的标志性景点，位于黄浦江畔，拥有众多风格各异的历史建筑，见证了上海的百年变迁。在这里可以欣赏到黄浦江两岸的壮丽景色。</p>
+        <p data-lang="en">The Bund is a landmark attraction in Shanghai, located along the Huangpu River. It has many historical buildings with different styles, witnessing the century - long changes in Shanghai. You can enjoy the magnificent scenery on both sides of the Huangpu River here.</p>
+        <p data-lang="ja">バンド通りは上海のランドマークで、黄浦江沿いに位置しています。様々なスタイルの歴史的建物があり、上海の百年にわたる変遷を目撃しています。ここでは黄浦江の両岸の壮大な景色を楽しむことができます。</p>
+        <p data-lang="th">ถนนบันด์เป็นสถานที่ท่องเที่ยวที่มีชื่อเสียงในเซี่ยงไฮ้ ซึ่งตั้งอยู่ริมแม่น้ำห่วงโป๋ มีอาคารประวัติศาสตร์หลายแห่งที่มีรูปแบบต่างกัน สืบทอดการเปลี่ยนแปลงของเซี่ยงไฮ้เป็นเวลาหลายศตวรรษ คุณสามารถเพลิดเพลินกับวิวสวยของทั้งสองฝั่งของแม่น้ำห่วงโป๋ที่นี่</p>
+        <h3 data-lang="zh">开放时间</h3>
+        <h3 data-lang="en">Opening Hours</h3>
+        <h3 data-lang="ja">開放時間</h3>
+        <h3 data-lang="th">เวลาเปิดทำการ</h3>
+        <p data-lang="zh">全天开放</p>
+        <p data-lang="en">Open 24 hours</p>
+        <p data-lang="ja">終日開放</p>
+        <p data-lang="th">เปิดตลอด 24 ชั่วโมง</p>
+        <h3 data-lang="zh">门票价格</h3>
+        <h3 data-lang="en">Ticket Price</h3>
+        <h3 data-lang="ja">入場料</h3>
+        <h3 data-lang="th">ราคาบัตรเข้า</h3>
+        <p data-lang="zh">免费</p>
+        <p data-lang="en">Free</p>
+        <p data-lang="ja">無料</p>
+        <p data-lang="th">ฟรี</p>
+        <h3 data-lang="zh">交通指南</h3>
+        <h3 data-lang="en">Transportation Guide</h3>
+        <h3 data-lang="ja">交通案内</h3>
+        <h3 data-lang="th">คำแนะนำการเดินทาง</h3>
+        <p data-lang="zh">可乘坐地铁 2 号线、10 号线到南京东路站，从 2 号口或 3 号口出站。</p>
+        <p data-lang="en">You can take the subway Line 2 or Line 10 to Nanjing East Road Station and exit from Exit 2 or Exit 3.</p>
+        <p data-lang="ja">地下鉄 2 号線または 10 号線を利用して南京東路駅まで行き、2 番出口または 3 番出口から出ることができます。</p>
+        <p data-lang="th">คุณสามารถใช้รถไฟใต้ดินไลน์ 2 หรือไลน์ 10 ไปยังสถานีนานจิง เอสต์ โรด สำรวจจากทางออก 2 หรือทางออก 3</p>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#places" data-lang="zh" id="places-link">场所</a></li>
+                <li><a href="#places" data-lang="en" id="places-link">Places</a></li>
+                <li><a href="#places" data-lang="ja" id="places-link">場所</a></li>
+                <li><a href="#places" data-lang="th" id="places-link">สถานที่</a></li>
+                <li><a href="#notes" data-lang="zh" id="notes-link">笔记</a></li>
+                <li><a href="#notes" data-lang="en" id="notes-link">Notes</a></li>
+                <li><a href="#notes" data-lang="ja" id="notes-link">ノート</a></li>
+                <li><a href="#notes" data-lang="th" id="notes-link">บันทึก</a></li>
+                <li><a href="#map" data-lang="zh" id="map-link" class="map-option">地图 <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="en" id="map-link" class="map-option">Map <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="ja" id="map-link" class="map-option">地図 <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="th" id="map-link" class="map-option">แผนที่ <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#info" data-lang="zh" id="info-link">信息</a></li>
+                <li><a href="#info" data-lang="en" id="info-link">Info</a></li>
+                <li><a href="#info" data-lang="ja" id="info-link">情報</a></li>
+                <li><a href="#info" data-lang="th" id="info-link">ข้อมูล</a></li>
+                <li><a href="#my" data-lang="zh" id="my-link">我的</a></li>
+                <li><a href="#my" data-lang="en" id="my-link">My</a></li>
+                <li><a href="#my" data-lang="ja" id="my-link">私の</a></li>
+                <li><a href="#my" data-lang="th" id="my-link">ของฉัน</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 打卡拍照框 -->
+    <div class="check-in-box">
+        <img src="your_photo.jpg" alt="打卡照片">
+        <p>打卡拍照：Jaynistarst</p>
+    </div>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById("language").value;
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function (element) {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+            document.title = document.querySelector(`title[data-lang="${lang}"]`).textContent;
+        }
+
+        // 页面加载时根据默认语言显示内容
+        window.onload = function () {
+            changeLanguage();
+        };
+    </script>
+</body>
+
+</html>

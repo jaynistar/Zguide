@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="zh">景区景点 - 智游上海</title>
+    <title data-lang="en">Attractions - Hello Shanghai</title>
+    <title data-lang="ja">観光名所 - こんにちは上海</title>
+    <title data-lang="th">สถานที่ท่องเที่ยว - สวัสดีเซี่ยงไฮ้</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 为景点选项添加样式 */
+        .attraction-option {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .attraction-option img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* 设置全局字体颜色为黑色 */
+        body {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 原有的 body 内容 -->
+    <header>
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+                <option value="th">ภาษาไทย</option>
+            </select>
+        </div>
+        <h1 data-lang="zh" id="header-title">智游上海</h1>
+        <h1 data-lang="en" id="header-title">Hello Shanghai</h1>
+        <h1 data-lang="ja" id="header-title">こんにちは上海</h1>
+        <h1 data-lang="th" id="header-title">สวัสดีเซี่ยงไฮ้</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="搜索..." class="search-box">
+        </div>
+    </header>
+
+    <main>
+        <h2 data-lang="zh">景区景点</h2>
+        <h2 data-lang="en">Attractions</h2>
+        <h2 data-lang="ja">観光名所</h2>
+        <h2 data-lang="th">สถานที่ท่องเที่ยว</h2>
+        <p data-lang="zh">以下是上海一些著名的景区景点，点击了解更多详情。</p>
+        <p data-lang="en">Here are some famous attractions in Shanghai. Click to learn more details.</p>
+        <p data-lang="ja">これは上海の有名な観光名所です。詳細を学ぶためにクリックしてください。</p>
+        <p data-lang="th">นี่คือสถานที่ท่องเที่ยวที่มีชื่อเสียงในเซี่ยงไฮ้ คลิกเพื่อดูรายละเอียดเพิ่มเติม</p>
+        <!-- 外滩 -->
+        <a href="bund.html" class="attraction-option">
+            <img src="bund.jpg" alt="外滩">
+            <h3 data-lang="zh">外滩</h3>
+            <h3 data-lang="en">The Bund</h3>
+            <h3 data-lang="ja">バンド通り</h3>
+            <h3 data-lang="th">ถนนบันด์</h3>
+            <p data-lang="zh">外滩是上海的标志性景点，位于黄浦江畔，拥有众多风格各异的历史建筑，见证了上海的百年变迁。在这里可以欣赏到黄浦江两岸的壮丽景色。</p>
+            <p data-lang="en">The Bund is a landmark attraction in Shanghai, located along the Huangpu River. It has many historical buildings with different styles, witnessing the century - long changes in Shanghai. You can enjoy the magnificent scenery on both sides of the Huangpu River here.</p>
+            <p data-lang="ja">バンド通りは上海のランドマークで、黄浦江沿いに位置しています。様々なスタイルの歴史的建物があり、上海の百年にわたる変遷を目撃しています。ここでは黄浦江の両岸の壮大な景色を楽しむことができます。</p>
+            <p data-lang="th">ถนนบันด์เป็นสถานที่ท่องเที่ยวที่มีชื่อเสียงในเซี่ยงไฮ้ ซึ่งตั้งอยู่ริมแม่น้ำห่วงโป๋ มีอาคารประวัติศาสตร์หลายแห่งที่มีรูปแบบต่างกัน สืบทอดการเปลี่ยนแปลงของเซี่ยงไฮ้เป็นเวลาหลายศตวรรษ คุณสามารถเพลิดเพลินกับวิวสวยของทั้งสองฝั่งของแม่น้ำห่วงโป๋ที่นี่</p>
+        </a>
+        <!-- 新天地 -->
+        <a href="xintiandi.html" class="attraction-option">
+            <img src="xintiandi.jpg" alt="新天地">
+            <h3 data-lang="zh">新天地</h3>
+            <h3 data-lang="en">Xintiandi</h3>
+            <h3 data-lang="ja">新天地</h3>
+            <h3 data-lang="th">ชินเตียนตี</h3>
+            <p data-lang="zh">新天地融合了传统石库门建筑与现代商业元素，是集购物、餐饮、娱乐为一体的时尚休闲街区，展现了上海的独特魅力。</p>
+            <p data-lang="en">Xintiandi combines traditional Shikumen architecture with modern commercial elements. It is a fashionable and leisure district integrating shopping, dining, and entertainment, showing the unique charm of Shanghai.</p>
+            <p data-lang="ja">新天地は伝統的な石庫門建築と現代的な商業要素を融合させています。ショッピング、飲食、エンターテイメントを一体としたファッショナブルなレジャーエリアで、上海の独特な魅力を見せています。</p>
+            <p data-lang="th">ชินเตียนตีรวมถึงสถาปัตยกรรมสิกูเมนแบบดั้งเดิมและองค์ประกอบทางการค้าแบบสมัยใหม่ เป็นเขตพักผ่อนและสวมสไตล์ที่รวมการช้อปปิ้ง การกินขนม และความบันเทิงไว้ด้วยกันแสดงให้เห็นถึงความเสน่ห์เฉพาะของเซี่ยงไฮ้</p>
+        </a>
+        <!-- 迪士尼 -->
+        <a href="disney.html" class="attraction-option">
+            <img src="disney.jpg" alt="迪士尼">
+            <h3 data-lang="zh">迪士尼</h3>
+            <h3 data-lang="en">Shanghai Disneyland</h3>
+            <h3 data-lang="ja">上海ディズニーランド</h3>
+            <h3 data-lang="th">สวนสนุกเซี่ยงไฮ้ดิสนีย์แลนด์</h3>
+            <p data-lang="zh">上海迪士尼乐园是中国大陆首座迪士尼主题乐园，充满了欢乐和梦幻，有各种精彩的游乐设施和表演，适合全家游玩。</p>
+            <p data-lang="en">Shanghai Disneyland is the first Disney - themed park in mainland China. It is full of joy and fantasy, with various exciting rides and shows, suitable for the whole family.</p>
+            <p data-lang="ja">上海ディズニーランドは中国本土で最初のディズニーテーマパークです。喜びと幻想に満ちており、さまざまな刺激的なアトラクションとショーがあり、家族全員に適しています。</p>
+            <p data-lang="th">สวนสนุกเซี่ยงไฮ้ดิสนีย์แลนด์เป็นสวนสนุกธีมดิสนีย์แห่งแรกในจีน ที่นี้เต็มไปด้วยความสุขและความฝัน มีอุปกรณ์สนุกและการแสดงต่างๆ ที่น่าตื่นเต้น เหมาะสำหรับทุกครอบครัว</p>
+        </a>
+        <!-- 豫园 -->
+        <a href="yuyuan.html" class="attraction-option">
+            <img src="yuyuan.jpg" alt="豫园">
+            <h3 data-lang="zh">豫园</h3>
+            <h3 data-lang="en">Yuyuan Garden</h3>
+            <h3 data-lang="ja">豫園</h3>
+            <h3 data-lang="th">สวนหยวน</h3>
+            <p data-lang="zh">豫园是上海著名的古典园林，具有浓厚的江南园林特色，园内亭台楼阁、假山池沼错落有致，尽显江南水乡的韵味。</p>
+            <p data-lang="en">Yuyuan Garden is a famous classical garden in Shanghai, with strong characteristics of southern Chinese gardens. There are pavilions, terraces, towers, artificial hills, and ponds in an orderly manner, showing the charm of the southern Chinese water towns.</p>
+            <p data-lang="ja">豫園は上海の有名な古典的な庭園で、江南の庭園の特色が強いです。亭、台、楼、閣、假山、池沼が整然と並んでおり、江南の水郷の魅力を見せています。</p>
+            <p data-lang="th">สวนหยวนเป็นสวนคลาสสิกที่มีชื่อเสียงในเซี่ยงไฮ้ มีลักษณะเฉพาะของสวนจีนภาคใต้อย่างชัดเจน มีตึกสวย สระน้ำ และภูเขาประดิษฐ์อยู่ในลักษณะที่เป็นระเบียบ แสดงให้เห็นถึงความสวยงามของเมืองน้ำภาคใต้ของจีน</p>
+        </a>
+        <!-- 安福路 -->
+        <a href="anfulu.html" class="attraction-option">
+            <img src="anfulu.jpg" alt="安福路">
+            <h3 data-lang="zh">安福路</h3>
+            <h3 data-lang="en">Anfu Road</h3>
+            <h3 data-lang="ja">安福路</h3>
+            <h3 data-lang="th">ถนนอันฟู</h3>
+            <p data-lang="zh">安福路是上海一条文艺气息浓厚的街道，街道两旁有许多特色小店、咖啡馆和艺术工作室，是文艺青年的聚集地。</p>
+            <p data-lang="en">Anfu Road is a street full of artistic atmosphere in Shanghai. There are many characteristic small shops, cafes, and art studios on both sides of the street, making it a gathering place for young artists.</p>
+            <p data-lang="ja">安福路は上海の芸術的な雰囲気に満ちた通りです。通りの両側には多くの特色ある小さな店舗、カフェ、アートスタジオがあり、若い芸術家たちの集まり場になっています。</p>
+            <p data-lang="th">ถนนอันฟูเป็นถนนที่เต็มไปด้วยบรรยากาศศิลปะในเซี่ยงไฮ้ มีร้านค้าขนาดเล็ก มีลักษณะพิเศษ คาเฟ่ และสตูดิโอศิลปะจำนวนมากอยู่ริมถนนทำให้เป็นสถานที่รวมตัวของผู้ชื่นชอบศิลปะ</p>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#places" data-lang="zh" id="places-link">场所</a></li>
+                <li><a href="#places" data-lang="en" id="places-link">Places</a></li>
+                <li><a href="#places" data-lang="ja" id="places-link">場所</a></li>
+                <li><a href="#places" data-lang="th" id="places-link">สถานที่</a></li>
+                <li><a href="#notes" data-lang="zh" id="notes-link">笔记</a></li>
+                <li><a href="#notes" data-lang="en" id="notes-link">Notes</a></li>
+                <li><a href="#notes" data-lang="ja" id="notes-link">ノート</a></li>
+                <li><a href="#notes" data-lang="th" id="notes-link">บันทึก</a></li>
+                <li><a href="#map" data-lang="zh" id="map-link" class="map-option">地图 <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="en" id="map-link" class="map-option">Map <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="ja" id="map-link" class="map-option">地図 <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#map" data-lang="th" id="map-link" class="map-option">แผนที่ <img src="Earth-icon.PNG" alt="Earth Icon" class="map-icon"></a></li>
+                <li><a href="#info" data-lang="zh" id="info-link">信息</a></li>
+                <li><a href="#info" data-lang="en" id="info-link">Info</a></li>
+                <li><a href="#info" data-lang="ja" id="info-link">情報</a></li>
+                <li><a href="#info" data-lang="th" id="info-link">ข้อมูล</a></li>
+                <li><a href="#my" data-lang="zh" id="my-link">我的</a></li>
+                <li><a href="#my" data-lang="en" id="my-link">My</a></li>
+                <li><a href="#my" data-lang="ja" id="my-link">私の</a></li>
+                <li><a href="#my" data-lang="th" id="my-link">ของฉัน</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            var lang = document.getElementById("language").value;
+            var elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(function (element) {
+                if (element.getAttribute('data-lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+            document.title = document.querySelector(`title[data-lang="${lang}"]`).textContent;
+        }
+
+        // 页面加载时根据默认语言显示内容
+        window.onload = function () {
+            changeLanguage();
+        };
+    </script>
+</body>
+
+</html>

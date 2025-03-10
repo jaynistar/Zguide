@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浦东新区博物馆 - 智游上海</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pudong_museums.css">
+</head>
+
+<body>
+    <header>
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="zh">中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="th">ภาษาไทย</option>
+            </select>
+        </div>
+        <h1 id="header-title">浦东新区博物馆</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="搜索..." class="search-box" oninput="searchMuseums()">
+        </div>
+    </header>
+
+    <section id="museums-list">
+        <div class="museum-box" data-link="shanghai1.html">
+            <h2>上海科技馆</h2>
+            <span class="tag">科普</span>
+            <p>上海科技馆是一座把自然科学技术和艺术融为一体的主题乐园，馆内设有多个展区，展示了丰富的科学知识和科技成果。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_ocean_aquarium.html">
+            <h2>上海海洋水族馆</h2>
+            <span class="tag">海洋生物</span>
+            <p>上海海洋水族馆拥有大量珍稀海洋生物，展示了不同海域的生态环境，让游客仿佛置身于海底世界。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_central_tower_observation_deck.html">
+            <h2>上海中心大厦观光厅</h2>
+            <span class="tag">建筑观光</span>
+            <p>上海中心大厦观光厅位于上海中心大厦顶部，可俯瞰上海城市全景，领略城市的繁华与壮丽。</p>
+        </div>
+        <div class="museum-box" data-link="aurora_museum.html">
+            <h2>震旦博物馆</h2>
+            <span class="tag">历史文化</span>
+            <p>震旦博物馆以收藏和展示中国古代文物为主，展品涵盖了陶瓷、玉器、佛像等多个领域，展现了中国悠久的历史文化。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_himalayas_museum.html">
+            <h2>上海喜玛拉雅美术馆</h2>
+            <span class="tag">艺术展览</span>
+            <p>上海喜玛拉雅美术馆举办各类当代艺术展览，推动艺术交流与发展，为观众带来前沿的艺术体验。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_pudong_art_museum.html">
+            <h2>上海浦东美术馆</h2>
+            <span class="tag">艺术收藏</span>
+            <p>上海浦东美术馆收藏了众多国内外优秀艺术作品，通过展览和教育活动，让公众更好地了解和欣赏艺术。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_children_museum.html">
+            <h2>上海儿童博物馆</h2>
+            <span class="tag">儿童科普</span>
+            <p>上海儿童博物馆以儿童为主要服务对象，通过互动体验和科普活动，激发儿童对科学和自然的兴趣。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_chinese_medicine_museum.html">
+            <h2>上海中医药博物馆</h2>
+            <span class="tag">中医药文化</span>
+            <p>上海中医药博物馆展示了中医药的发展历程、理论知识和实践成果，弘扬了中医药文化。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_tobacco_museum.html">
+            <h2>上海烟草博物馆</h2>
+            <span class="tag">烟草文化</span>
+            <p>上海烟草博物馆介绍了烟草的历史、种植、加工和文化，让人们了解烟草行业的发展。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_national_instrument_factory_display_hall.html">
+            <h2>上海民族乐器一厂陈列馆</h2>
+            <span class="tag">民族乐器</span>
+            <p>上海民族乐器一厂陈列馆展示了各种民族乐器的制作工艺和发展历程，弘扬了民族音乐文化。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_telecom_museum.html">
+            <h2>上海电信博物馆</h2>
+            <span class="tag">通信历史</span>
+            <p>上海电信博物馆展示了上海电信的发展历程和通信技术的演变，让人们了解通信行业的发展。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_automobile_museum_pudong_branch.html">
+            <h2>上海汽车博物馆浦东分馆</h2>
+            <span class="tag">汽车文化</span>
+            <p>上海汽车博物馆浦东分馆展示了汽车的发展历史和技术创新，让人们了解汽车文化。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_textile_museum_pudong_branch.html">
+            <h2>上海纺织博物馆浦东分馆</h2>
+            <span class="tag">纺织文化</span>
+            <p>上海纺织博物馆浦东分馆展示了上海纺织业的发展历程和纺织技术的演变，弘扬了纺织文化。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_glass_museum_pudong_branch.html">
+            <h2>上海玻璃博物馆浦东分馆</h2>
+            <span class="tag">玻璃艺术</span>
+            <p>上海玻璃博物馆浦东分馆展示了玻璃艺术的发展历程和制作工艺，让人们了解玻璃艺术的魅力。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_animation_museum.html">
+            <h2>上海动漫博物馆</h2>
+            <span class="tag">动漫文化</span>
+            <p>上海动漫博物馆展示了动漫的发展历程、创作过程和文化内涵，推动了动漫文化的传播。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_film_museum_pudong_branch.html">
+            <h2>上海电影博物馆浦东分馆</h2>
+            <span class="tag">电影文化</span>
+            <p>上海电影博物馆浦东分馆展示了上海电影的发展历程和电影文化的魅力，让人们了解电影行业的发展。</p>
+        </div>
+        <div class="museum-box" data-link="shanghai_astronomical_museum_pudong_branch.html">
+            <h2>上海天文博物馆浦东分馆</h2>
+            <span class="tag">天文科普</span>
+            <p>上海天文博物馆浦东分馆展示了天文知识和天文观测技术，激发了人们对宇宙的探索欲望。</p>
+        </div>
+        <!-- More museums can be added as needed -->
+    </section>
+
+    <script>
+        // 语言切换函数
+        function changeLanguage() {
+            var language = document.getElementById('language').value;
+            var museumBoxes = document.querySelectorAll('.museum-box');
+
+            museumBoxes.forEach(function (box) {
+                var dataLink = box.getAttribute('data-link');
+                var translatedLink = getTranslatedLink(dataLink, language);
+
+                // Update the onclick event for each museum-box based on selected language
+                box.onclick = function() {
+                    window.location.href = translatedLink;
+                };
+            });
+
+            // 变更标题
+            var headerTitle = {
+                zh: "浦东新区博物馆",
+                ja: "浦東新区博物館",
+                en: "Pudong District Museums",
+                th: "พิพิธภัณฑ์เขตผู่ตง"
+            };
+
+            document.getElementById('header-title').innerText = headerTitle[language];
+        }
+
+        // 获取翻译后的链接
+        function getTranslatedLink(link, language) {
+            var langSuffix = '';
+
+            switch (language) {
+                case 'zh':
+                    langSuffix = '.html';
+                    break;
+                case 'ja':
+                    langSuffix = '.html';
+                    break;
+                case 'en':
+                    langSuffix = '.html';
+                    break;
+                case 'th':
+                    langSuffix = '.html';
+                    break;
+                default:
+                    langSuffix = '.html'; // Default to Chinese if no language selected
+                    break;
+            }
+
+            return link.replace('.html', langSuffix);
+        }
+
+        // 搜索博物馆功能
+        function searchMuseums() {
+            var searchText = document.getElementById('search').value.toLowerCase();
+            var museums = document.querySelectorAll('.museum-box');
+
+            museums.forEach(function(museum) {
+                var title = museum.querySelector('h2').innerText.toLowerCase();
+                var description = museum.querySelector('p').innerText.toLowerCase();
+
+                if (title.includes(searchText) || description.includes(searchText)) {
+                    museum.style.display = 'block';
+                } else {
+                    museum.style.display = 'none';
+                }
+            });
+        }
+
+        // 初始化语言设置
+        window.onload = function() {
+            changeLanguage();
+        };
+    </script>
+
+</body>
+
+</html>
